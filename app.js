@@ -1,14 +1,6 @@
-const a = 5;
-const b = 2;
-let myName = "youngeun";
+const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
 
-console.log(a + b);
-console.log(a * b);
-console.log(a / b);
-console.log("hello " + myName);
+console.log(daysOfWeek);
 
-myName = "kim young eun";
-console.log("your new name is " + myName);
-
-const amIfat = true;
-console.log(amIfat);
+daysOfWeek.push("sun");
+console.log(daysOfWeek);
