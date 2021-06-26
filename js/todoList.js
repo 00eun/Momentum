@@ -9,15 +9,18 @@ function saveTodo() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
 }
 
-function deleteTodo(evnet) {
+function deleteTodo(event) {
   const targetTodo = event.target.parentNode;
   targetTodo.remove();
+  todos = todos.filter((toDo) => toDo.id !== parseInt(targetTodo.id));
+  saveTodo();
 }
 
 function paintTodo(newTodo) {
   const li = document.createElement("li");
+  li.id = newTodo.id;
   const span = document.createElement("span");
-  span.innerText = newTodo;
+  span.innerText = newTodo.text;
   const button = document.createElement("button");
   button.innerText = "❌";
   li.appendChild(span);
@@ -31,8 +34,12 @@ function handleToDoSubmit(event) {
   const newTodo = todoInput.value;
   todoInput.value = "";
   // console.log(newTodo);
-  todos.push(newTodo);
-  paintTodo(newTodo);
+  const newTodoObj = {
+    text: newTodo,
+    id: Date.now(),
+  };
+  todos.push(newTodoObj);
+  paintTodo(newTodoObj);
   saveTodo();
 }
 
