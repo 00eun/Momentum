@@ -10,7 +10,7 @@ function saveTodo() {
 }
 
 function deleteTodo(event) {
-  const targetTodo = event.target.parentNode;
+  const targetTodo = event.target.parentNode.parentNode;
   targetTodo.remove();
   todos = todos.filter((toDo) => toDo.id !== parseInt(targetTodo.id));
   saveTodo();
@@ -22,9 +22,11 @@ function paintTodo(newTodo) {
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const button = document.createElement("button");
-  button.innerText = "❌";
+  const i = document.createElement("i");
+  i.className = `fas fa-times`;
   li.appendChild(span);
   li.appendChild(button);
+  button.appendChild(i);
   todoList.appendChild(li);
   button.addEventListener("click", deleteTodo);
 }

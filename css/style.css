@@ -61,6 +61,17 @@ button i {
   font-weight: 600;
 }
 
+#greeting {
+  font-size: 36px;
+  line-height: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+#todo-form {
+  margin-top: 80px;
+}
 #todo-form input {
   width: 300px;
   font-size: 1rem;
@@ -70,9 +81,37 @@ button i {
 #todo-form input::placeholder {
   font-weight: 100;
 }
-.hidden {
-  display: none;
+
+#todo-list {
+  padding: 0;
+  width: 300px;
+  margin: 0 auto;
 }
+#todo-list li {
+  list-style: none;
+  background: rgba(85, 85, 85, 0.377);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.164);
+  text-align: left;
+  position: relative;
+  padding: 10px 30px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+#todo-list li span {
+}
+
+#todo-list li button {
+  margin: 0;
+  position: absolute;
+  top: 3px;
+  right: 20px;
+  padding: 10px;
+}
+#todo-list li button i {
+  color: rgb(238, 40, 139);
+}
+
 #quote {
   font-weight: 100;
   position: fixed;
