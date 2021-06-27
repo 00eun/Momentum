@@ -1,11 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 body {
-  background-color: bisque;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.849);
+  text-align: center;
+  color: #fdfdfd;
+  font-family: "Noto Sans KR", sans-serif;
+  position: relative;
 }
 
-.clicked {
-  color: tomato;
+#wrap {
 }
 
+#clock {
+  font-size: 8rem;
+  line-height: 0;
+  letter-spacing: -0.3125rem;
+  padding-top: 150px;
+}
+#login-form {
+}
+input,
+button {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  outline-style: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 0.5rem;
+  margin: 10px;
+}
+
+input {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.63);
+  color: #fdfdfd;
+  text-align: center;
+}
+
+input::placeholder {
+  color: #fdfdfd;
+  text-align: center;
+}
+
+button {
+  color: #fdfdfd;
+  margin-left: -3rem;
+}
+button i {
+  font-size: 1.25rem;
+}
+
+#login-form input {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+#login-form input::placeholder {
+  font-weight: 600;
+}
+
+#todo-form input {
+  width: 300px;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+#todo-form input::placeholder {
+  font-weight: 100;
+}
 .hidden {
   display: none;
+}
+#quote {
+  font-weight: 100;
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+}
+
+#weather {
+  font-size: 1rem;
+  position: fixed;
+  top: 10px;
+  right: 20px;
 }
